@@ -8,7 +8,7 @@ public class WordsCounter {
 
     Map<String, Integer> counter;
 
-    WordsCounter(List<String> words) {
+    public WordsCounter(List<String> words) {
 
 	counter = new HashMap<String, Integer>();
 	for (String s : words) {
@@ -16,7 +16,7 @@ public class WordsCounter {
 	}
     }
 
-    void countWords(List<String> words) {
+    public void countWords(List<String> words) {
 
 	for (String s : words) {
 
@@ -24,5 +24,9 @@ public class WordsCounter {
 		counter.put(s, counter.get(s) + 1);
 	    }
 	}
+    }
+
+    public Map<String, Integer> getCounter() {
+        return counter;
     }
 }
